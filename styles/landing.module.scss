@@ -1,0 +1,146 @@
+$bb_yellow: rgb(255,215,0);
+$bb_grey: rgb(51,51,51);
+
+.background {
+    position:fixed;
+    padding:0;
+    margin:0;
+
+    top:0;
+    left:0;
+
+    width: 100%;
+    height: 100%;
+    background:rgba(250,250,250);
+
+    background-image: url(/images/white_bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h1 {
+        writing-mode: vertical-lr;
+    }
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    width: 90%;
+    // background: rgba(15,15,15,0.8);
+    display: flex;
+    justify-content: center;
+    gap:4rem;
+    flex-direction: row;
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        //  margin-right: -100px;
+        width: 40%;
+
+        .imgBoxBB {
+            position: relative;
+
+            .image{
+                position: relative;
+                border-radius: .5em;
+                width: 100%;
+                height:auto;
+                filter: grayscale(100%);
+                transition: 0.3s ease-in-out;
+            }
+
+            .left{
+                position: absolute;
+                z-index: -1;
+                width: 100%;
+                height: 100%;    
+                top: 0;
+                left: 0;
+                background: white;
+                border-radius: .5em;
+                transition: 0.5s ease-in-out;
+            }
+
+            .right{
+                position: absolute;
+                z-index: -1;
+                width: 100%;
+                height: 100%;    
+                top: 0;
+                left: 0;
+                background: white;
+                border-radius: .5em;
+                transition: 0.5s ease-in-out;
+            }
+
+            &:hover {
+                .left {
+                    background: $bb_grey;
+                    transform: translate(-2rem, -2rem);
+                }
+                .right {
+                    background: $bb_yellow;
+                    transform: translate(2rem, 2rem);
+                }
+                .image {
+                    filter: none;
+                }
+            }
+        }
+
+        .imgBoxBigs {
+            position: relative;
+
+            .image{
+                position: relative;
+                border-radius: .5em;
+                width: 100%;
+                height:auto;
+                filter: grayscale(100%);
+                transition: 0.3s ease-in-out;
+            }
+
+            .left{
+                position: absolute;
+                z-index: -1;
+                width: 100%;
+                height: 100%;    
+                top: 0;
+                left: 0;
+                background: white;
+                border-radius: .5em;
+                transition: 0.5s ease-in-out;
+            }
+
+            .right{
+                position: absolute;
+                z-index: -1;
+                width: 100%;
+                height: 100%;    
+                top: 0;
+                left: 0;
+                background: white;
+                border-radius: .5em;
+                transition: 0.5s ease-in-out;
+            }
+
+            &:hover {
+                .left {
+                    background: rgb(220,220,220);
+                    transform: translate(-2rem, -2rem);
+                }
+                .right {
+                    background: rgb(213,0,50);
+                    transform: translate(2rem, 2rem);
+                }
+                .image {
+                    filter: none;
+                }
+            }
+        }
+    }
+}
