@@ -1,5 +1,7 @@
 $bb_yellow: rgb(255,215,0);
 $bb_grey: rgb(51,51,51);
+$bigs_red: rgb(213,0,50);
+$bigs_white: rgb(220,220,220);
 
 .background {
     position:fixed;
@@ -130,11 +132,11 @@ $bb_grey: rgb(51,51,51);
 
             &:hover {
                 .left {
-                    background: rgb(220,220,220);
+                    background: $bigs_white;
                     transform: translate(-2rem, -2rem);
                 }
                 .right {
-                    background: rgb(213,0,50);
+                    background: $bigs_red;
                     transform: translate(2rem, 2rem);
                 }
                 .image {
