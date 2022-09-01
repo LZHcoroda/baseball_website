@@ -1,147 +1,235 @@
-$bb_yellow: rgb(255,215,0);
-$bb_grey: rgb(51,51,51);
-$bigs_red: rgb(213,0,50);
-$bigs_white: rgb(220,220,220);
+@use './variables';
+$black: #001A20;
+$grey: #D9D9D9;
 
-.background {
-    position:fixed;
-    padding:0;
-    margin:0;
-
-    top:0;
-    left:0;
-
-    width: 100%;
-    height: 100%;
-
-    background-image: url(/images/white_bg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    h1 {
-        writing-mode: vertical-lr;
-    }
+@mixin button_style {
+    font-size: 1.25em;
+    padding: 14px 30px;
+    border-radius: 100px;
+    background: none;
+    margin-top: 40px;
+    transition: 0.3s ease-out ;
+    opacity: 0%;
+    cursor: pointer;
 }
 
-.container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform:translate(-50%, -50%);
-    width: 90%;
-    // background: rgba(15,15,15,0.8);
-    display: flex;
-    justify-content: center;
-    gap:4rem;
-    flex-direction: row;
+.background {
+    position: fixed;
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    width: 100%; 
+    height: 100%;
+    overflow: hidden;
+    font: variables.$font;
 
-    .box {
-        display: flex;
-        flex-direction: column;
-        //  margin-right: -100px;
-        width: 40%;
+    .team_image{
+        position: absolute;
+        object-fit: cover;
+        aspect-ratio: 16/9;
+    }
 
-        .imgBoxBB {
-            position: relative;
+    .grid_left {
+        display: grid;
+        background-image: url(../public/images/baseball_field_full.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        .img_grid {
+            
+            display: grid;
+            width: 100%;
+            height: 100%;
+            grid-template-columns: 10% auto 10%;
+            grid-template-rows: 10% auto 10%;
+            overflow: hidden;
 
-            .image{
-                position: relative;
-                border-radius: .5em;
+            .bb_img {
+                margin: auto;
+                grid-row-start: 2;
+                grid-column-start: 2;
+                filter: grayscale(1);
                 width: 100%;
-                height:auto;
-                filter: grayscale(100%);
-                transition: 0.3s ease-in-out;
+                object-position: center;
+                object-fit: cover;
+                aspect-ratio: 16/9;
+                opacity: 0;
+                transition: 0.7s ease-out;
             }
 
-            .left{
-                position: absolute;
-                z-index: -1;
+            .bigs_img {
+                margin: auto;
+                grid-row-start: 2;
+                grid-column-start: 2;
+                filter: grayscale(1);
                 width: 100%;
-                height: 100%;    
-                top: 0;
-                left: 0;
-                background: white;
-                border-radius: .5em;
-                transition: 0.5s ease-in-out;
+                object-position: center;
+                object-fit: cover;
+                aspect-ratio: 16/9;
+                opacity: 0;
+                transition: 0.7s ease-out;
             }
+        }
+    }
 
-            .right{
-                position: absolute;
-                z-index: -1;
-                width: 100%;
-                height: 100%;    
-                top: 0;
-                left: 0;
-                background: white;
-                border-radius: .5em;
-                transition: 0.5s ease-in-out;
-            }
+    .grid_right {
+        background: $grey;
+        pointer-events: none;
 
-            &:hover {
-                .left {
-                    background: $bb_grey;
-                    transform: translate(-2rem, -2rem);
-                }
-                .right {
-                    background: $bb_yellow;
-                    transform: translate(2rem, 2rem);
-                }
-                .image {
-                    filter: none;
-                }
+        &:hover > .grid_r_top {
+            height: 0%;
+            
+            & > .dot {
+                bottom: 100%;
+                opacity: 0%;
             }
         }
 
-        .imgBoxBigs {
-            position: relative;
-
-            .image{
-                position: relative;
-                border-radius: .5em;
-                width: 100%;
-                height:auto;
-                filter: grayscale(100%);
-                transition: 0.3s ease-in-out;
-            }
-
-            .left{
-                position: absolute;
-                z-index: -1;
-                width: 100%;
-                height: 100%;    
-                top: 0;
-                left: 0;
-                background: white;
-                border-radius: .5em;
-                transition: 0.5s ease-in-out;
-            }
-
-            .right{
-                position: absolute;
-                z-index: -1;
-                width: 100%;
-                height: 100%;    
-                top: 0;
-                left: 0;
-                background: white;
-                border-radius: .5em;
-                transition: 0.5s ease-in-out;
-            }
-
+        .grid_r_top {
+            display: flex;
+            flex-direction: column;
+            background: $black;
+            height: 50%;
+            transition: 0.7s ease-out;
+            pointer-events: auto;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: $grey;
+            
             &:hover {
-                .left {
-                    background: $bigs_white;
-                    transform: translate(-2rem, -2rem);
+                height: 100%;
+
+                & > h1:after {
+                    width: 0;
                 }
-                .right {
-                    background: $bigs_red;
-                    transform: translate(2rem, 2rem);
+
+                & > .dot {
+                    bottom: 0%;
+                    opacity: 0%;
                 }
-                .image {
-                    filter: none;
+
+                & + .grid_r_btm > .dot{
+                    top: 100%;
+                    opacity: 0%;
                 }
+
+                & .btn {
+                    opacity: 100%;  
+
+                    &:hover {
+                        background: $grey;
+                        color: $black;
+                    }
+                }
+            }
+
+            .btn {
+                @include button_style();
+                border: 2px solid $grey;
+                color: $grey;
+            }
+
+            .dot {
+                width: 50px;
+                height: 50px;
+                background-color: $grey;
+                border-radius: 50%;
+                position: absolute;
+                bottom: 50%;
+                transition: 0.7s ease-out;
+            }
+
+            h1:after {
+                position: absolute;
+                content: " ";
+                width: 100%;
+                height: 2px;
+                background-color: $grey;
+                margin: auto 0;
+                top: 0;
+                bottom: 0;
+                transition: width 0.5s;
+                display: block;
             }
         }
+    
+        .grid_r_btm {
+            display: flex;
+            flex-direction: column;
+            background: $grey;
+            height: 50%;
+            pointer-events: auto;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: 0.7s ease-out;
+            pointer-events: auto;
+
+            &:hover {
+                height: 100%;
+
+                & > h1:after {
+                    width: 0;
+                }
+
+                & > .dot {
+                    top: 0%;
+                    opacity: 0%;
+                }
+
+                & > .btn {
+                    opacity: 100%;
+
+                    &:hover {
+                        background: $black;
+                        color: $grey;
+                    }
+                }
+
+            }
+
+            .btn {
+                @include button_style();
+                border: 2px solid $black;
+                color: $black
+            }
+
+            .dot {
+                width: 50px;
+                height: 50px;
+                background-color: $black;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                transition: 0.7s ease-out;
+            }
+
+            h1:after {
+                position: absolute;
+                content: " ";
+                width: 100%;
+                height: 2px;
+                background-color: $black;
+                margin: auto 0;
+                top: 0;
+                bottom: 0;
+                transition: width 0.5s;
+                display: block;
+            }
+        }
+    
+    }
+    
+    h1 {
+        position: relative;
+        font-size: 80px;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin: 0;
     }
 }
