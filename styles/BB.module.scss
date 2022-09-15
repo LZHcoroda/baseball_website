@@ -1,4 +1,5 @@
 @use 'variables';
+@use 'breakpoints';
 
 @mixin hero_btn {
     border-radius: 5px;

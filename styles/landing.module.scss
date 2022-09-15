@@ -53,7 +53,7 @@
                 object-fit: cover;
                 aspect-ratio: 16/9;
                 opacity: 0;
-                transition: 0.4s ease-out;
+                transition: 0.3s ease-out;
             }
 
             .bigs_img {
@@ -66,7 +66,7 @@
                 object-fit: cover;
                 aspect-ratio: 16/9;
                 opacity: 0;
-                transition: 0.4s ease-out;
+                transition: 0.3s ease-out;
             }
         }
     }
@@ -89,7 +89,7 @@
             flex-direction: column;
             background: variables.$bb_black;
             height: 50%;
-            transition: 0.7s ease-out;
+            transition: 0.3s ease-out;
             pointer-events: auto;
             justify-content: center;
             align-items: center;
@@ -139,7 +139,7 @@
                 border-radius: 50%;
                 position: absolute;
                 bottom: 50%;
-                transition: 0.7s ease-out;
+                transition: 0.3s ease-out;
             }
 
             h1:after {
@@ -166,7 +166,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            transition: 0.7s ease-out;
+            transition: 0.3s ease-out;
             pointer-events: auto;
 
             &:hover {
@@ -205,7 +205,7 @@
                 border-radius: 50%;
                 position: absolute;
                 top: 50%;
-                transition: 0.7s ease-out;
+                transition: 0.3s ease-out;
             }
 
             h1:after {

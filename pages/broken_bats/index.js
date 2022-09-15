@@ -1,4 +1,4 @@
-import styles from '../../styles/BB.module.scss'
+import styles from '/styles/BB.module.scss'
 import Link from 'next/link';
 import Image from "next/image"
 

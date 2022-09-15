@@ -1,0 +1,31 @@
+@use '../variables';
+@use '../breakpoints';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: variables.$bb_font;
+    background: variables.$bigs_white;
+    overflow: hidden;
+    // min-height: calc(100vh - 48px - 220px);
+
+    .section1 {
+        display: flex;
+        width: 100%;
+        height: 450px;
+        // background: variables.$bb_yellow;
+        background: linear-gradient(variables.$bb_yellow, variables.$bb_yellow2);
+        color: variables.$bb_black_2;
+        justify-content: center;
+        align-items: center;
+    
+        p {
+            text-transform: capitalize;
+            font-size: 82px;
+            font-weight: 400;
+            font-style: italic;
+        }
+    }
+}
