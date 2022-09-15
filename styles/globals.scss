@@ -4,28 +4,34 @@ html, body {
     padding: 0px;
     margin: 0px;
     font-family: variables.$font;
+    height: 100%;
+    scroll-behavior: smooth;
     overflow-x: hidden;
 }
 
 // .content-space {
-
+//     flex-direction: column;
+//     min-height: 100%;
 // }
 
 nav {
-    // background: #333333;
-    background-image: linear-gradient(to right, rgb(45,45,45,1) 75% , rgb(255,215,0,0.9));
+    // background-image: linear-gradient(to right, rgb(45,45,45,1) 75% , rgb(255,215,0,0.9));
+    background: variables.$bb_yellow;
     overflow: hidden;
+    position: fixed;
+    width: 100%;
     display: flex;
+    z-index: 2;
+    height: 48px;
     justify-content: center;
     align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10%;
-    padding-right: 10%;
+    color: variables.$bb_black_2;
+    font-family: variables.$bb_font;
+
 
     .nav-container {
         width: 100%;
-        max-width: 980px;
+        max-width: 80%;
         display: flex;
         align-items: center;
 
@@ -35,30 +41,56 @@ nav {
                 margin-left: 0px;
             }
         }
-
-        a {
+        a:not(.logo_tag) {
             text-decoration: none;
-            color: gold;
-            margin-left: 20px;
+            text-transform: capitalize;
+            padding: 1rem 1rem;
+            font-weight: 600;
+            color: variables.$bb_black;
+            transition: 0.2s all ease-in-out;
+
+            &:hover {
+                // box-shadow: inset 100px 0 0 0 #54b3d6;
+                background: variables.$bb_black_2;
+                color: variables.$bigs_white;
+            }
         }
     }
 }
 
-footer {
-    background: rgb(20,20,20);
-    // margin: 0px auto 0px;
-    padding: 100px 48px 150px 48px;
+.foot {
+    // background: linear-gradient( to top, variables.$bb_black 75%, variables.$bb_black_2 100%) ;
+    background: variables.$bb_black;
+    width: 100%;
+    height: 220px; 
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    color: white;
+    font-family: variables.$bb_font;
+    
+    color: variables.$bigs_white;
+}
 
-    .foot-containr {
-        width: 100%;
-        max-width: 980px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+.footer-container-row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    a{
+        color: variables.$bigs_white;
+        font-size: 30px;
     }
+}
+
+.title-bg {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;    
+}
+.title-md {
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;    
 }

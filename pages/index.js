@@ -10,8 +10,6 @@ export default function Home() {
   const [bb_opacity, setBB_opacity] = useState(0);
   const [bigs_opacity, setBigs_opacity] = useState (0);
 
-  console.log(bb_opacity);
-
   return (
     <>
       <div className={styles.background}>
@@ -25,7 +23,7 @@ export default function Home() {
           <div onMouseEnter={() => setBB_opacity(1)} onMouseLeave={() => setBB_opacity(0)} className={styles.grid_r_top}>
             <h1>Broken Bats</h1>
             <h2>Amateur Team With The Will To Compete</h2>
-            <button className={styles.btn}>Find Out More <RightOutlined/></button>
+            <Link href = "/broken_bats/"><a><button className={styles.btn}>Find Out More <RightOutlined/></button></a></Link>
             <div className={styles.dot}></div>
           </div> 
           <div onMouseEnter={() => setBigs_opacity(1)} onMouseLeave={() => setBigs_opacity(0)} className={styles.grid_r_btm}>
