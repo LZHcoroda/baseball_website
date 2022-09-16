@@ -29,13 +29,13 @@ export default function BB_navbar() {
                     <Link href="/broken_bats">
                         <a>home</a>
                     </Link>
-                    <Link href="/broken_bats/game-schedule">
+                    <Link href="/broken_bats/game_schedule">
                         <a>schedule</a>
                     </Link>
-                    <Link href="/broken_bats/join-us">
+                    <Link href="/broken_bats/join_us">
                         <a>join us</a>
                     </Link>
-                    <Link href="/broken_bats/about-us">
+                    <Link href="/broken_bats/about_us">
                         <a>about us</a>
                     </Link>
                     <Link href="/">

@@ -9,23 +9,55 @@
     font-family: variables.$bb_font;
     background: variables.$bigs_white;
     overflow: hidden;
-    // min-height: calc(100vh - 48px - 220px);
+    min-height: calc(100vh - 48px - 220px);
 
     .section1 {
         display: flex;
         width: 100%;
-        height: 450px;
+        height: 50vh;
         // background: variables.$bb_yellow;
         background: linear-gradient(variables.$bb_yellow, variables.$bb_yellow2);
         color: variables.$bb_black_2;
         justify-content: center;
         align-items: center;
-    
-        p {
-            text-transform: capitalize;
-            font-size: 82px;
-            font-weight: 400;
-            font-style: italic;
+        overflow: hidden;
+        white-space: nowrap;
+        
+        .header_wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 45%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+
+            p:nth-child(odd){
+                color: variables.$bb_black_2;
+                -webkit-text-stroke-width: 3px;
+                -webkit-text-fill-color: transparent;
+                opacity: 20%;
+            }
+
+            p:nth-child(1){
+                margin-bottom: -30px;
+                align-self: flex-start;
+            }
+            p:nth-child(3){
+                margin-top: -30px;
+                align-self: flex-end;
+            }
         }
+
+        p {
+            text-transform: uppercase;
+            font-size: 96px;
+            font-weight: 600;
+            font-style: italic;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+
     }
 }

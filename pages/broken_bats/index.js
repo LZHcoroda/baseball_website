@@ -25,7 +25,7 @@ export default function BB_home() {
       </div>
       <div className={styles.divider}/>
       <div className={styles.home_content_container} id="section2">
-        <Link href="/broken_bats/game-schedule">
+        <Link href="/broken_bats/game_schedule">
           <a>
             <div className={styles.home_portal}>
               <div className={styles.image_container}>
@@ -45,7 +45,7 @@ export default function BB_home() {
             </div>
           </a>
         </Link>
-        <Link href="/broken_bats/join-us">
+        <Link href="/broken_bats/join_us">
           <a>
             <div className={styles.home_portal}>
               <div className={styles.image_container}>
@@ -65,7 +65,7 @@ export default function BB_home() {
             </div>
           </a>
         </Link>
-        <Link href="/broken_bats/about-us">
+        <Link href="/broken_bats/about_us">
           <a>
             <div className={styles.home_portal}>
               <div className={styles.image_container}>
