@@ -5,9 +5,9 @@ import Image from "next/image"
 export default function BB_home() {
   return (
     <div className={styles.home_container}>
-      <div className={styles.hero_wrapper}>
-        <div className={styles.banner_content}>
-          <div className={styles.banner_image}>
+      <div className={styles.header}>
+        <div className={styles.hero_wrapper}>
+          <div className={styles.hero__image}>
             <Image
               src='/images/hero_bb.jpg'
               alt=''
@@ -20,24 +20,24 @@ export default function BB_home() {
           <p>swing harder</p>
           <br />
           <br />
-          <Link href = "#section2"><a><button className={styles.btn1}>learn more</button></a></Link>
+          <Link href = "#section2"><a><button className={styles.hero__btn}>learn more</button></a></Link>
         </div>
       </div>
-      <div className={styles.divider}/>
-      <div className={styles.home_content_container} id="section2">
+      <div className={styles.home_divider}/>
+      <div className={styles.body}>
         <Link href="/broken_bats/game_schedule">
           <a>
-            <div className={styles.home_portal}>
-              <div className={styles.image_container}>
+            <div className={styles.card}>
+              <div className={styles.card__image}>
                 <Image
                   src="/images/calendar.jpg"
                   alt=''
                   layout="fill"
                 />
               </div>
-              <div className={styles.portal_container}>
-                <p className={styles.card_title}>game schedule</p>
-                <div className={styles.description}>
+              <div className={styles.card__body}>
+                <p className={styles.card__title}>game schedule</p>
+                <div className={styles.card__description}>
                   <p>League game schedule for the ongoing or upcoming season.</p>
                 </div>
                 <button>more info</button>
@@ -47,17 +47,17 @@ export default function BB_home() {
         </Link>
         <Link href="/broken_bats/join_us">
           <a>
-            <div className={styles.home_portal}>
-              <div className={styles.image_container}>
+            <div className={styles.card}>
+              <div className={styles.card__image}>
                 <Image
                   src="/images/balls_bats.jpg"
                   alt=''
                   layout="fill"
                 />
               </div>
-              <div className={styles.portal_container}>
-                <p className={styles.card_title}>join broken bats</p>
-                <div className={styles.description}>
+              <div className={styles.card__body}>
+                <p className={styles.card__title}>join broken bats</p>
+                <div className={styles.card__description}>
                   <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere eligendi culpa labore non a odit optio.</p>
                 </div>
                 <button>more info</button>
@@ -67,17 +67,17 @@ export default function BB_home() {
         </Link>
         <Link href="/broken_bats/about_us">
           <a>
-            <div className={styles.home_portal}>
-              <div className={styles.image_container}>
+            <div className={styles.card}>
+              <div className={styles.card__image}>
                 <Image
                   src="/images/Brokenbats2.jpg"
                   alt=''
                   layout="fill"
                 />
               </div>
-              <div className={styles.portal_container}>
-                <p className={styles.card_title}>about us</p>
-                <div className={styles.description}>
+              <div className={styles.card__body}>
+                <p className={styles.card__title}>about us</p>
+                <div className={styles.card__description}>
                   <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere eligendi culpa labore non a odit optio.</p>
                 </div>
                 <button>more info</button>
