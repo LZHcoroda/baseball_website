@@ -4,16 +4,16 @@ import Image from "next/image"
 
 export default function game_schedule() {
   return (
-    <div className={sub.wrapper}>
-      <div className={sub.section1}>
-        <div className={`${sub.header_wrapper} ${local.header_wrapper}`} >
+    <div className={sub.container}>
+      <div className={sub.header}>
+        <div className={`${sub.header__title} ${local.header__title}`} >
           <p>game schedule</p>
           <p>game schedule</p>
           <p>game schedule</p>
         </div>
       </div>
-      <div className={local.section2}>
-        
+      <div className={local.body}>
+        <p>TO BE UPDATED</p>
       </div>
     </div>
     

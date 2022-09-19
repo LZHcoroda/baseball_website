@@ -17,10 +17,10 @@ export default function Footer() {
             {
                 bb_site && 
                 <div className="footer-container-row">
-                    <Link href="/">
+                    <Link href="https://www.facebook.com/brokenbatsbaseball">
                         <a><FacebookOutlined /></a>
                     </Link>
-                    <Link href="/">
+                    <Link href="https://www.instagram.com/brokenbatsbaseball/">
                         <a><InstagramOutlined /></a>
                     </Link>
                 </div>

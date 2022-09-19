@@ -38,9 +38,9 @@ export default function BB_navbar() {
                     <Link href="/broken_bats/about_us">
                         <a>about us</a>
                     </Link>
-                    <Link href="/">
+                    {/* <Link href="/">
                         <a>contact us</a>
-                    </Link>
+                    </Link> */}
                 </div>
             </nav>
         </>

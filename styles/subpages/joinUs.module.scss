@@ -1,3 +1,42 @@
-.header_wrapper {
-    width: 40% !important;
+@use '../variables';
+@use '../breakpoints';
+
+@mixin section2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+.header__title {
+    width: 800px !important;
+}
+
+.content_wrapper {
+    width: 100%;
+}
+.content__description {
+    @include section2;
+    height: 15vh;
+    text-align: center;
+
+    & .description_red {
+        color: red;
+    }
+
+    p {
+        font-size: 18px;
+        font-family: variables.$reading-font;
+    }
+}
+
+.content__form {
+    @include section2;
+    height: 90vh;
+    margin-bottom: 16px;
+
+    iframe {
+        width: 40%;
+        height: 100%;
+    }
 }
