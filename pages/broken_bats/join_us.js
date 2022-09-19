@@ -1,6 +1,6 @@
 import sub from '/styles/template/subpages_layout.module.scss';
 import local from '/styles/subpages/joinUs.module.scss';
-import Image from "next/image"
+import Link from 'next/link';
 
 export default function join_us() {
   return (
@@ -18,8 +18,8 @@ export default function join_us() {
             <p>
               Please fill in the form to let us know you are interested in playing in the league with us. <br />
               if the form does not appear below, kindly use the link below: <br/>
-              https://forms.gle/AaUTrpMstzrxjdRn7
             </p>
+            <Link href="https://forms.gle/AaUTrpMstzrxjdRn7"><a> <p>https://forms.gle/AaUTrpMstzrxjdRn7</p> </a></Link>
             <p className={`${local.content__description} ${local.description_red}`}>
               *The team is currently looking for more pitchers & catchers
             </p>

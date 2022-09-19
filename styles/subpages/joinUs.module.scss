@@ -18,6 +18,7 @@
 .content__description {
     @include section2;
     height: 15vh;
+    margin-bottom: 16px;
     text-align: center;
 
     & .description_red {

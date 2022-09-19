@@ -20,11 +20,11 @@ export default function BB_home() {
           <p>swing harder</p>
           <br />
           <br />
-          <Link href = "#section2"><a><button className={styles.hero__btn}>learn more</button></a></Link>
+          <Link href = "#body"><a><button className={styles.hero__btn}>learn more</button></a></Link>
         </div>
       </div>
       <div className={styles.home_divider}/>
-      <div className={styles.body}>
+      <div className={styles.body} id="body">
         <Link href="/broken_bats/game_schedule">
           <a>
             <div className={styles.card}>
@@ -58,7 +58,7 @@ export default function BB_home() {
               <div className={styles.card__body}>
                 <p className={styles.card__title}>join broken bats</p>
                 <div className={styles.card__description}>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere eligendi culpa labore non a odit optio.</p>
+                  <p>Join the broken bats baseball family! </p>
                 </div>
                 <button>more info</button>
               </div>
@@ -78,7 +78,7 @@ export default function BB_home() {
               <div className={styles.card__body}>
                 <p className={styles.card__title}>about us</p>
                 <div className={styles.card__description}>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere eligendi culpa labore non a odit optio.</p>
+                  <p>Find out more about where we came from and how we came to be, as well as our team's objective!</p>
                 </div>
                 <button>more info</button>
               </div>
