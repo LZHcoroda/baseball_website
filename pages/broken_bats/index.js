@@ -78,7 +78,7 @@ export default function BB_home() {
               <div className={styles.card__body}>
                 <p className={styles.card__title}>about us</p>
                 <div className={styles.card__description}>
-                  <p>Find out more about where we came from and how we came to be, as well as our team's objective!</p>
+                  <p>Find out more about where we started and how we came to be, as well as our team's goal!</p>
                 </div>
                 <button>more info</button>
               </div>
