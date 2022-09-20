@@ -9,6 +9,28 @@ export default function Home() {
 
   const [bb_opacity, setBB_opacity] = useState(0);
   const [bigs_opacity, setBigs_opacity] = useState (0);
+  const [showBbBtn, setShowBbBtn] = useState(false);
+  const [showBigsBtn, setShowBigsBtn] = useState(false);
+
+  function hoverBB() {
+    setShowBbBtn(true);
+    setBB_opacity(1)
+  }
+
+  function leaveBB() {
+    setShowBbBtn(false);
+    setBB_opacity(0)
+  }
+
+  function hoverBigs() {
+    setShowBigsBtn(true);
+    setBigs_opacity(1);
+  }
+
+  function leaveBigs() {
+    setShowBigsBtn(false);
+    setBigs_opacity(0);
+  }
 
   return (
     <>
@@ -20,16 +42,16 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.grid_right}>
-          <div onMouseEnter={() => setBB_opacity(1)} onMouseLeave={() => setBB_opacity(0)} className={styles.grid_r_top}>
+          <div onMouseEnter={hoverBB} onMouseLeave={leaveBB} className={styles.grid_r_top}>
             <h1>Broken Bats</h1>
             <h2>Amateur Team With The Will To Compete</h2>
-            <Link href = "/broken_bats/"><a><button className={styles.btn}>Find Out More <RightOutlined/></button></a></Link>
+            {showBbBtn && <Link href = "/broken_bats/"><a><button className={styles.btn}>Find Out More <RightOutlined/></button></a></Link>}
             <div className={styles.dot}></div>
           </div> 
-          <div onMouseEnter={() => setBigs_opacity(1)} onMouseLeave={() => setBigs_opacity(0)} className={styles.grid_r_btm}>
+          <div onMouseEnter={hoverBigs} onMouseLeave={leaveBigs} className={styles.grid_r_btm}>
             <h1>BIGS</h1>
             <h2>Baseball Interest Group Singapore</h2>
-            <button className={styles.btn}>Find Out More <RightOutlined/></button>
+            {showBigsBtn && <button className={styles.btn}>Find Out More <RightOutlined/></button>}
             <div className={styles.dot}></div>
           </div>
         </div>
