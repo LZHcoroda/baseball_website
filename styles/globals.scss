@@ -40,9 +40,9 @@ html, body {
                 margin-right: auto;
             }
 
-            
             a:not(.logo_tag) {
-                text-decoration: none;
+                text-decoration: underline;
+                text-decoration-thickness: 3px;
                 text-transform: capitalize;
                 font-weight: 600;
                 font-size: 18px;
@@ -58,9 +58,9 @@ html, body {
             position: fixed;
             left: 0%;
             top: 38px;
-            gap: 40px;
+            gap: 100px;
             width: 100%;
-            height: 40%;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             // padding: 30px 0px;
@@ -68,26 +68,6 @@ html, body {
             text-align: center;
             justify-content: center;
             transition: 0.3s;
-        }
-
-        @keyframes inAnimation {
-            0% {
-              opacity: 0;
-            }
-            100% {
-              opacity: 1;
-              visibility: visible;
-            }
-        }
-          
-        @keyframes outAnimation {
-            0% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 0;
-                visibility: hidden;
-            }
         }
 
         .hamburger {
@@ -186,15 +166,22 @@ html, body {
     }
 }
 
-.title-bg {
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 1px;    
+@keyframes inAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      visibility: visible;
+    }
 }
-.title-md {
-    text-transform: capitalize;
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 1px;    
+  
+@keyframes outAnimation {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
 }

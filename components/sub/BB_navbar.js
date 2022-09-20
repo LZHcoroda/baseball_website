@@ -5,10 +5,10 @@ import { useState } from 'react';
 export default function BB_navbar() {
 
     const mountedStyle = {
-        animation: "inAnimation 250ms ease-in"
+        animation: "inAnimation 0.3s ease-in"
       };
       const unmountedStyle = {
-        animation: "outAnimation 250ms ease-out",
+        animation: "outAnimation 0.3s ease-out",
         animationFillMode: "forwards"
       };
 
@@ -28,6 +28,12 @@ export default function BB_navbar() {
             setNavMobileShown(true);
         }
         setHamburgerOpen(!hamburgerOpen);
+    }
+
+    const resetAllState = () => {
+        setHamburgerOpen(false);
+        setHamburgerClass("hamburger");
+        setNavMobileShown(false);
     }
 
     return(
@@ -52,16 +58,16 @@ export default function BB_navbar() {
                             <a>portal</a>
                         </Link>
                         <Link href="/broken_bats">
-                            <a>home</a>
+                            <a>Home</a>
                         </Link>
                         <Link href="/broken_bats/game_schedule">
-                            <a>schedule</a>
+                            <a>Schedule</a>
                         </Link>
                         <Link href="/broken_bats/join_us">
-                            <a>join us</a>
+                            <a>Join us</a>
                         </Link>
                         <Link href="/broken_bats/about_us">
-                            <a>about us</a>
+                            <a>About us</a>
                         </Link>
                     </div>
 
@@ -75,19 +81,19 @@ export default function BB_navbar() {
                     navMobileShown &&
                         <div className='nav-mobile__menu' style={hamburgerOpen? mountedStyle : unmountedStyle} onAnimationEnd={()=> {if(!hamburgerOpen) setNavMobileShown(false)}}>
                             <Link href="/">
-                                <a>portal</a>
+                                <a onClick={resetAllState}>portal</a>
                             </Link>
                             <Link href="/broken_bats">
-                                <a>home</a>
+                                <a onClick={resetAllState}>home</a>
                             </Link>
                             <Link href="/broken_bats/game_schedule">
-                                <a>schedule</a>
+                                <a onClick={resetAllState}>schedule</a>
                             </Link>
                             <Link href="/broken_bats/join_us">
-                                <a>join us</a>
+                                <a onClick={resetAllState}>join us</a>
                             </Link>
                             <Link href="/broken_bats/about_us">
-                                <a>about us</a>
+                                <a onClick={resetAllState}>about us</a>
                             </Link>
                         </div>
                     }
