@@ -1,237 +1,300 @@
 @use './variables';
+@use './breakpoints';
 
-@mixin button_style {
+@mixin button_mixin {
     font-size: 1.25em;
     padding: 14px 30px;
     border-radius: 100px;
     background: none;
     margin-top: 40px;
     transition: 0.3s ease-out ;
-    opacity: 0%;
     cursor: pointer;
 }
 
-.background {
-    position: fixed;
-    display:grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100%;
-    width: 100%; 
-    height: 100%;
-    overflow: hidden;
-    font: variables.$font;
 
-    .team_image{
-        position: absolute;
-        object-fit: cover;
-        aspect-ratio: 16/9;
+
+@media screen and (max-width:breakpoints.$screen-sm-max) {
+    .grid_left {
+        display: none;
     }
 
-    .grid_left {
-        display: grid;
-        background-image: url(../public/images/baseball_field_full.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        
-        .img_grid {
-            
-            display: grid;
-            width: 100%;
-            height: 100%;
-            grid-template-columns: 10% auto 10%;
-            grid-template-rows: 10% auto 10%;
-            overflow: hidden;
-
-            .bb_img {
-                margin: auto;
-                grid-row-start: 2;
-                grid-column-start: 2;
-                filter: grayscale(1);
-                width: 100%;
-                object-position: center;
-                object-fit: cover;
-                aspect-ratio: 16/9;
-                opacity: 0;
-                transition: 0.3s ease-out;
-            }
-
-            .bigs_img {
-                margin: auto;
-                grid-row-start: 2;
-                grid-column-start: 2;
-                filter: grayscale(1);
-                width: 100%;
-                object-position: center;
-                object-fit: cover;
-                aspect-ratio: 16/9;
-                opacity: 0;
-                transition: 0.3s ease-out;
-            }
-        }
+    .btn {
+        display: none;
     }
 
     .grid_right {
-        background: variables.$grey;
-        pointer-events: none;
+        // height: 100%;
+        // background: green;
 
-        &:hover > .grid_r_top {
-            height: 0%;
-            
-            & > .dot {
-                bottom: 100%;
-                opacity: 0%;
-            }
+        h1 {
+            font-size: 48px;
+        }
+
+        h2 {
+            font-size: 16px;
         }
 
         .grid_r_top {
             display: flex;
             flex-direction: column;
             background: variables.$bb_black;
-            height: 50%;
-            transition: 0.3s ease-out;
-            pointer-events: auto;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
             color: variables.$grey;
-            
-            &:hover {
-                height: 100%;
-                background: variables.$bb_yellow;
-                color: variables.$bb_black;
+            text-align: center;
+            justify-content: center;
+            height: 50vh;
 
-                & > h1:after {
-                    width: 0;
-                    background-color: variables.$bb_black;
-                }
-
-                & > .dot {
-                    bottom: 0%;
-                    opacity: 0%;
-                }
-
-                & + .grid_r_btm > .dot{
-                    top: 100%;
-                    opacity: 0%;
-                }
-
-                & .btn {
-                    opacity: 100%;  
-
-                    &:hover {
-                        background: variables.$bb_black;
-                        color: variables.$grey;
-                    }
-                }
-            }
-
-            .btn {
-                @include button_style();
-                border: 2px solid variables.$bb_black;
-                color: variables.$bb_black;
-            }
-
-            .dot {
-                width: 50px;
-                height: 50px;
-                background-color: variables.$grey;
-                border-radius: 50%;
-                position: absolute;
-                bottom: 50%;
-                transition: 0.3s ease-out;
-            }
-
-            h1:after {
-                position: absolute;
-                content: " ";
-                width: 100%;
-                height: 2px;
-                background-color: variables.$grey;
-                margin: auto 0;
-                top: 0;
-                bottom: 0;
-                transition: width 0.5s;
-                display: block;
+            .mobile__btn {
+                @include button_mixin();
+                border: 2px solid variables.$bigs_white;
+                color: variables.$bigs_white;
             }
         }
-    
+
         .grid_r_btm {
             display: flex;
             flex-direction: column;
-            background: variables.$grey;
+            background: variables.$bigs_white;
             color: variables.$bb_black;
-            height: 50%;
-            pointer-events: auto;
-            justify-content: center;
-            align-items: center;
             text-align: center;
-            transition: 0.3s ease-out;
-            pointer-events: auto;
+            justify-content: center;
+            height: 50vh;
 
-            &:hover {
-                height: 100%;
-
-                & > h1:after {
-                    width: 0;
-                }
-
-                & > .dot {
-                    top: 0%;
-                    opacity: 0%;
-                }
-
-                & > .btn {
-                    opacity: 100%;
-
-                    &:hover {
-                        background: variables.$bb_black;
-                        color: variables.$grey;
-                    }
-                }
-
-            }
-
-            .btn {
-                @include button_style();
+            .mobile__btn {
+                @include button_mixin();
                 border: 2px solid variables.$bb_black;
                 color: variables.$bb_black;
             }
+        }
+    }
+}
 
-            .dot {
-                width: 50px;
-                height: 50px;
-                background-color: variables.$bb_black;
-                border-radius: 50%;
-                position: absolute;
-                top: 50%;
-                transition: 0.3s ease-out;
-            }
+@media screen and (min-width:breakpoints.$screen-lg-max) {
+    .background {
+        position: fixed;
+        display:grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100%;
+        width: 100%; 
+        height: 100%;
+        overflow: hidden;
+        font: variables.$font;
 
-            h1:after {
-                position: absolute;
-                content: " ";
+        .team_image{
+            position: absolute;
+            object-fit: cover;
+            aspect-ratio: 16/9;
+        }
+
+        .grid_left {
+            display: grid;
+            background-image: url(../public/images/baseball_field_full.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+            .img_grid {
+                
+                display: grid;
                 width: 100%;
-                height: 2px;
-                background-color: variables.$bb_black;
-                margin: auto 0;
-                top: 0;
-                bottom: 0;
-                transition: width 0.5s;
-                display: block;
+                height: 100%;
+                grid-template-columns: 10% auto 10%;
+                grid-template-rows: 10% auto 10%;
+                overflow: hidden;
+
+                .bb_img {
+                    margin: auto;
+                    grid-row-start: 2;
+                    grid-column-start: 2;
+                    filter: grayscale(1);
+                    width: 100%;
+                    object-position: center;
+                    object-fit: cover;
+                    aspect-ratio: 16/9;
+                    opacity: 0;
+                    transition: 0.3s ease-out;
+                }
+
+                .bigs_img {
+                    margin: auto;
+                    grid-row-start: 2;
+                    grid-column-start: 2;
+                    filter: grayscale(1);
+                    width: 100%;
+                    object-position: center;
+                    object-fit: cover;
+                    aspect-ratio: 16/9;
+                    opacity: 0;
+                    transition: 0.3s ease-out;
+                }
             }
         }
-    
-    }
-    
-    h1 {
-        position: relative;
-        font-size: 80px;
-        margin: 0;
-    }
 
-    h2 {
-        font-size: 20px;
-        margin: 0;
-    }
+        .grid_right {
+            background: variables.$grey;
+            pointer-events: none;
+
+            &:hover > .grid_r_top {
+                height: 0%;
+                
+                & > .dot {
+                    bottom: 100%;
+                    opacity: 0%;
+                }
+            }
+
+            .grid_r_top {
+                display: flex;
+                flex-direction: column;
+                background: variables.$bb_black;
+                height: 50%;
+                transition: 0.3s ease-out;
+                pointer-events: auto;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                color: variables.$grey;
+                
+                &:hover {
+                    height: 100%;
+                    background: variables.$bb_yellow;
+                    color: variables.$bb_black;
+
+                    & > h1:after {
+                        width: 0;
+                        background-color: variables.$bb_black;
+                    }
+
+                    & > .dot {
+                        bottom: 0%;
+                        opacity: 0%;
+                    }
+
+                    & + .grid_r_btm > .dot{
+                        top: 100%;
+                        opacity: 0%;
+                    }
+
+                    & .btn {
+                        opacity: 100%;  
+
+                        &:hover {
+                            background: variables.$bb_black;
+                            color: variables.$grey;
+                        }
+                    }
+                }
+
+                .btn {
+                    @include button_mixin();
+                    border: 2px solid variables.$bb_black;
+                    color: variables.$bb_black;
+                }
+
+                .mobile__btn {
+                    display: none;
+                }
+
+                .dot {
+                    width: 50px;
+                    height: 50px;
+                    background-color: variables.$grey;
+                    border-radius: 50%;
+                    position: absolute;
+                    bottom: 50%;
+                    transition: 0.3s ease-out;
+                }
+
+                h1:after {
+                    position: absolute;
+                    content: " ";
+                    width: 100%;
+                    height: 2px;
+                    background-color: variables.$grey;
+                    margin: auto 0;
+                    top: 0;
+                    bottom: 0;
+                    transition: width 0.5s;
+                    display: block;
+                }
+            }
+        
+            .grid_r_btm {
+                display: flex;
+                flex-direction: column;
+                background: variables.$grey;
+                color: variables.$bb_black;
+                height: 50%;
+                pointer-events: auto;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                transition: 0.3s ease-out;
+                pointer-events: auto;
+
+                &:hover {
+                    height: 100%;
+
+                    & > h1:after {
+                        width: 0;
+                    }
+
+                    & > .dot {
+                        top: 0%;
+                        opacity: 0%;
+                    }
+
+                    & > .btn {
+                        opacity: 100%;
+
+                        &:hover {
+                            background: variables.$bb_black;
+                            color: variables.$grey;
+                        }
+                    }
+
+                }
+
+                .btn {
+                    @include button_mixin();
+                    border: 2px solid variables.$bb_black;
+                    color: variables.$bb_black;
+                }
+
+                .dot {
+                    width: 50px;
+                    height: 50px;
+                    background-color: variables.$bb_black;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 50%;
+                    transition: 0.3s ease-out;
+                }
+
+                h1:after {
+                    position: absolute;
+                    content: " ";
+                    width: 100%;
+                    height: 2px;
+                    background-color: variables.$bb_black;
+                    margin: auto 0;
+                    top: 0;
+                    bottom: 0;
+                    transition: width 0.5s;
+                    display: block;
+                }
+            }
+        
+        }
+        
+        h1 {
+            position: relative;
+            font-size: 80px;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin: 0;
+        }
+}
 }

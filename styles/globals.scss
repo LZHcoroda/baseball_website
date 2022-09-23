@@ -23,7 +23,7 @@ html, body {
         width: 100%;
         display: flex;
         z-index: 2;
-        height: 38px;
+        height: 46px;
         justify-content: center;
         align-items: center;
         color: variables.$bb_black_2;
@@ -151,7 +151,7 @@ html, body {
     flex-direction: column;
     align-items: center;
     font-family: variables.$bb_font;
-    
+    text-transform: uppercase;
     color: variables.$bigs_white;
 }
 

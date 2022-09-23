@@ -1,4 +1,3 @@
-// import styles from '../styles/landing.module.scss'
 import styles from '../styles/landing.module.scss';
 import { RightOutlined } from '@ant-design/icons';
 import Link from 'next/link';
@@ -46,12 +45,14 @@ export default function Home() {
             <h1>Broken Bats</h1>
             <h2>Amateur Team With The Will To Compete</h2>
             {showBbBtn && <Link href = "/broken_bats/"><a><button className={styles.btn}>Find Out More <RightOutlined/></button></a></Link>}
+            <Link href = "/broken_bats/"><a><button className={styles.mobile__btn}>Learn More</button></a></Link>
             <div className={styles.dot}></div>
           </div> 
           <div onMouseEnter={hoverBigs} onMouseLeave={leaveBigs} className={styles.grid_r_btm}>
             <h1>BIGS</h1>
             <h2>Baseball Interest Group Singapore</h2>
             {showBigsBtn && <button className={styles.btn}>Find Out More <RightOutlined/></button>}
+            <Link href = "/"><a><button className={styles.mobile__btn}>Coming Soon</button></a></Link>
             <div className={styles.dot}></div>
           </div>
         </div>
