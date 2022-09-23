@@ -51,7 +51,7 @@ export default function Home() {
           <div onMouseEnter={hoverBigs} onMouseLeave={leaveBigs} className={styles.grid_r_btm}>
             <h1>BIGS</h1>
             <h2>Baseball Interest Group Singapore</h2>
-            {showBigsBtn && <button className={styles.btn}>Find Out More <RightOutlined/></button>}
+            {showBigsBtn && <button className={styles.btn}>Coming Soon<RightOutlined/></button>}
             <Link href = "/"><a><button className={styles.mobile__btn}>Coming Soon</button></a></Link>
             <div className={styles.dot}></div>
           </div>
