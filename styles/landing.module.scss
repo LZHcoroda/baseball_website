@@ -43,12 +43,22 @@
             align-items: center;
             height: 50vh;
 
-            .mobile__btn {
-                @include button_mixin();
-                border: 2px solid variables.$bigs_white;
-                color: variables.$bigs_white;
-            }
+            a {
+                text-decoration: none !important;
 
+                .mobile__btn {
+                    @include button_mixin();
+                    display:inline;
+                    border: 2px solid variables.$bigs_white;
+                    color: variables.$bigs_white;
+
+                    &:active {
+                        background: variables.$bigs_white;
+                        color: variables.$bb_black;
+                    }
+                }
+            }
+            
             .dot {
                 width: 50px;
                 height: 50px;
@@ -70,12 +80,22 @@
             align-items: center;
             height: 50vh;
 
-            .mobile__btn {
-                @include button_mixin();
-                border: 2px solid variables.$bb_black;
-                color: variables.$bb_black;
-            }
+            a {
+                text-decoration: none !important;
 
+                .mobile__btn {
+                    @include button_mixin();
+                    display: inline;
+                    border: 2px solid variables.$bb_black;
+                    color: variables.$bb_black;
+
+                    // &:active {
+                    //     background: variables.$bb_black;
+                    //     color: variables.$bigs_white
+                    // }
+                }
+            }
+              
             .dot {
                 width: 50px;
                 height: 50px;
