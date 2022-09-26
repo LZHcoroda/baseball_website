@@ -6,7 +6,7 @@ export default function about_us() {
   return (
     <div className={sub.container}>
       <div className={sub.header}>
-        <div className={sub.header__title}>
+        <div className={`${sub.header__title} ${local.header__title}`}>
           <p>about us</p>
           <p>about us</p>
           <p>about us</p>

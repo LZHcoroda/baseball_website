@@ -14,8 +14,6 @@
     .header {
         display: flex;
         width: 100%;
-        height: 50vh;
-        // background: variables.$bb_yellow;
         background: linear-gradient(variables.$bb_yellow, variables.$bb_yellow2);
         color: variables.$bb_black_2;
         justify-content: center;
@@ -51,7 +49,6 @@
 
         p {
             text-transform: uppercase;
-            font-size: 96px;
             font-weight: 600;
             font-style: italic;
             margin: 0;
@@ -59,5 +56,34 @@
         }
 
 
+    }
+}
+
+@media screen and (max-width:breakpoints.$screen-sm-max) {
+    .header {
+        height: 35vh;
+        .header__title {
+            p:nth-child(odd){
+                -webkit-text-stroke-width: 2px !important;
+            }
+            p:nth-child(1){
+                margin-bottom: 0px !important;
+            }
+            p:nth-child(3){
+                margin-top: 0px !important;
+            }
+        }
+        p {
+            font-size: 40px;
+        }
+    }
+}
+
+@media screen and (min-width:breakpoints.$screen-lg-max) {
+    .header {
+        height: 50vh;
+        p {
+            font-size: 96px;
+        }
     }
 }
