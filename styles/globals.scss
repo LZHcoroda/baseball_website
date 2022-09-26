@@ -45,8 +45,12 @@ html, body {
                 text-decoration-thickness: 3px;
                 text-transform: capitalize;
                 font-weight: 600;
-                font-size: 18px;
+                font-size: 40px;
                 color: variables.$bigs_white;
+
+                &:active {
+                    color: variables.$bb_yellow;
+                }
             }
         }
 
@@ -63,7 +67,6 @@ html, body {
             height: 100vh;
             display: flex;
             flex-direction: column;
-            // padding: 30px 0px;
             background-color: variables.$bb_black;
             text-align: center;
             justify-content: center;

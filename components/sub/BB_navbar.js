@@ -79,7 +79,7 @@ export default function BB_navbar() {
                     
                     {
                     navMobileShown &&
-                        <div className='nav-mobile__menu' style={hamburgerOpen? mountedStyle : unmountedStyle} onAnimationEnd={()=> {if(!hamburgerOpen) setNavMobileShown(false)}}>
+                        <div className='nav-mobile__menu' style={hamburgerOpen? mountedStyle : unmountedStyle} onAnimationEnd={()=> {if(!hamburgerOpen) setNavMobileShown(false)}} ontouchstart="">
                             <Link href="/">
                                 <a onClick={resetAllState}>portal</a>
                             </Link>
