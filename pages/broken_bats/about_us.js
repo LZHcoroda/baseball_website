@@ -17,7 +17,7 @@ export default function about_us() {
           <div className={local.body__text}>
             <div className={local.text__constrainer}>
               <p>where we came from</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique vel repellendus natus eos, id vitae dolore reprehenderit rerum debitis repellat maiores dolores? Reiciendis minus expedita deserunt nisi eveniet neque animi.</p>
+              <p>The &quot;Broken Bats &quot; are made up of members that began their baseball journey in either a school baseball club or the BIGS(Baseball Interest Group Singapore) and have played together casually for a number of years. For many of us and perhaps future members as well, this is our gateway to playing as a team in Singapore.</p>
             </div>
           </div>
           <div className={local.body__img}>
@@ -43,7 +43,7 @@ export default function about_us() {
           <div className={local.body__text}>
             <div className={local.text__constrainer}>
               <p>our goal and attitude</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique vel repellendus natus eos, id vitae dolore reprehenderit rerum debitis repellat maiores dolores? Reiciendis minus expedita deserunt nisi eveniet neque animi.</p>
+              <p>The team goal is to always bring meaningful experience home after a game or training session, in terms of playing as a team and individually. While at the same time, creating a environment where one&apos;s mistake is no one&apos;s fault but rather everyone&apos;s learning point. </p>
             </div>
           </div>
         </div>
