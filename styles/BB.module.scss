@@ -165,6 +165,7 @@
 @media screen and (max-width:breakpoints.$screen-sm-max) {
     .header {
         height: 60vh;
+        min-height: 400px;
         .hero_wrapper {
             margin-left: 7% !important;
             p {
@@ -214,6 +215,7 @@
 @media screen and (min-width:breakpoints.$screen-md-min) and (max-width: breakpoints.$screen-md-max) {
     .header {
         height: 60vh;
+        
         .hero_wrapper {
             margin-left: 15% !important;
             p {
@@ -264,7 +266,7 @@
 @media screen and (min-width:breakpoints.$screen-lg-min) {
 
     .header {
-        height: 95vh;
+        height: 85vh;
             p {
                 font-size: 92px;
             }

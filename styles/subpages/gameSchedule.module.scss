@@ -1,9 +1,20 @@
-.header__title {
-    width: 1600px !important;
-}
+@use '../variables';
+@use '../breakpoints';
 
 .body {
     justify-content: center;
     align-items: center;
     height: 50vh;
+}
+
+@media screen and (max-width:breakpoints.$screen-sm-max) {
+    .header__title {
+        width: 800px !important;
+    }
+}
+
+@media screen and (min-width:breakpoints.$screen-md-min) {
+    .header__title {
+        width: 1600px !important;
+    }
 }

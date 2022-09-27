@@ -5,6 +5,7 @@ import Link from 'next/link';
 export default function join_us() {
   return (
     <div className={sub.container}>
+      <div className='emptyblock'></div>
       <div className={sub.header}>
         <div className={`${sub.header__title} ${local.header__title}`} >
           <p>join us</p>

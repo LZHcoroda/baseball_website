@@ -5,6 +5,7 @@ import Image from "next/image"
 export default function BB_home() {
   return (
     <div className={styles.home_container}>
+      <div className='emptyblock'></div>
       <div className={styles.header}>
         <div className={styles.hero_wrapper}>
           <div className={styles.hero__image}>

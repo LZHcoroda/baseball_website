@@ -5,6 +5,7 @@ import Image from "next/image"
 export default function game_schedule() {
   return (
     <div className={sub.container}>
+      <div className='emptyblock'></div>
       <div className={sub.header}>
         <div className={`${sub.header__title} ${local.header__title}`} >
           <p>game schedule</p>
