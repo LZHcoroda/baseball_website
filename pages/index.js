@@ -45,7 +45,7 @@ export default function Home() {
             <h1>Broken Bats</h1>
             <h2>Amateur Team With The Will To Compete</h2>
             {showBbBtn && <Link href = "/broken_bats/"><a><button className={styles.btn}>Find Out More <RightOutlined/></button></a></Link>}
-            <Link href = "/broken_bats/"><a><button className={styles.mobile__btn}>Learn More</button></a></Link>
+            <Link href = "/broken_bats/"><a><button className={styles.mobile__btn}>Find Out More</button></a></Link>
             <div className={styles.dot}></div>
           </div> 
           <div onMouseEnter={hoverBigs} onMouseLeave={leaveBigs} className={styles.grid_r_btm}>
