@@ -63,7 +63,7 @@
     
 }
 
-@media screen and (min-width:breakpoints.$screen-lg-max) {
+@media screen and (min-width:breakpoints.$screen-md-min) {
     .body__list {
         flex-direction: row;
         height: 50vh;

@@ -1,23 +1,19 @@
 @use '../variables';
 @use '../breakpoints';
 
-@mixin section2 {
+@mixin content_mixin {
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: center;
 }
 
-.header__title {
-    width: 800px !important;
-}
-
 .content_wrapper {
     width: 100%;
 }
 .content__description {
-    @include section2;
-    height: 15vh;
+    @include content_mixin;
+    height: auto;
     margin-bottom: 16px;
     text-align: center;
 
@@ -32,12 +28,29 @@
 }
 
 .content__form {
-    @include section2;
+    @include content_mixin;
     height: 90vh;
-    margin-bottom: 16px;
+    margin: 16px 0px;
 
     iframe {
         width: 40%;
         height: 100%;
+    }
+}
+
+@media screen and (max-width:breakpoints.$screen-sm-max) {
+    .header__title {
+        width: 280px !important;
+    }
+    .content__form {
+        iframe {
+            width: 70%;
+        }
+    }
+}
+
+@media screen and (min-width:breakpoints.$screen-lg-min) {
+    .header__title {
+        width: 800px !important;
     }
 }

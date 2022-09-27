@@ -79,7 +79,7 @@
     }
 }
 
-@media screen and (min-width:breakpoints.$screen-lg-max) {
+@media screen and (min-width:breakpoints.$screen-md-min) {
     .header {
         height: 50vh;
         p {

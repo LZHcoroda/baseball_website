@@ -14,7 +14,7 @@ html, body {
     display: none;
 }
 
-@media screen and (max-width:breakpoints.$screen-sm-max) {
+@media screen and (max-width:breakpoints.$screen-md-max) {
     nav {
         // background-image: linear-gradient(to right, rgb(45,45,45,1) 75% , rgb(255,215,0,0.9));
         background: variables.$bb_yellow;
@@ -99,7 +99,7 @@ html, body {
     }
 }
 
-@media screen and (min-width:breakpoints.$screen-lg-max) {
+@media screen and (min-width:breakpoints.$screen-lg-min) {
     nav {
         // background-image: linear-gradient(to right, rgb(45,45,45,1) 75% , rgb(255,215,0,0.9));
         background: variables.$bb_yellow;

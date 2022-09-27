@@ -1,8 +1,9 @@
 // Smartphone 
-$screen-sm-max: 480px;
+$screen-sm-max: 920px;
 
 // Tablets and small desktops
-$screen-md-max: 768px;
+$screen-md-min: 921px;
+$screen-md-max: 1159px;
 
 // Large tablets and desktops
-$screen-lg-max: 992px;
+$screen-lg-min: 1160px;
