@@ -53,14 +53,15 @@
         width: 80% !important;
     }
 
-    .body__list {
-        flex-direction: column;
-        height: 70vh;
-        .body__img{
-            height: 100%;
+    .body {
+        .body__list {
+            flex-direction: column;
+            height: 100vh;
+            .body__img{
+                height: 100%;
+            }
         }
     }
-    
 }
 
 @media screen and (min-width:breakpoints.$screen-md-min) {
